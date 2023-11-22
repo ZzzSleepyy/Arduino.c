@@ -12,3 +12,20 @@ void loop() {
     Serial.println("Plastic or Glass");
   }
 }
+-------------------------------------------------------------------------------------
+
+void loop() {
+  int inductiveVal = digitalRead(inductivePin);
+  
+  int ultrasonicVal = digitalRead(echoPin);
+
+  int capacitiveVal = digitalRead(capacitivePin);
+
+  if (inductiveVal == HIGH) {
+    Serial.println("Metal");
+  } else if (ultrasonicVal == HIGH && capacitiveVal == LOW) {
+    Serial.println("Plastic or Glass");
+  } else {
+    Serial.println("Undetected");
+  }
+}
