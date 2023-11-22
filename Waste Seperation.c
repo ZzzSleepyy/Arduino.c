@@ -1,6 +1,12 @@
 void loop() {
   int inductiveVal = digitalRead(inductivePin);
   
+  digitalWrite(ultrasonicPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(ultrasonicPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(ultrasonicPin, LOW);
+	
   int ultrasonicVal = digitalRead(echoPin);
 
   int capacitiveVal = digitalRead(capacitivePin);
@@ -16,7 +22,13 @@ void loop() {
 
 void loop() {
   int inductiveVal = digitalRead(inductivePin);
-  
+
+  digitalWrite(ultrasonicPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(ultrasonicPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(ultrasonicPin, LOW);
+
   int ultrasonicVal = digitalRead(echoPin);
 
   int capacitiveVal = digitalRead(capacitivePin);
