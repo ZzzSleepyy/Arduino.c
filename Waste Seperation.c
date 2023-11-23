@@ -41,3 +41,17 @@ void loop() {
     Serial.println("Undetected");
   }
 }
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+void loop() {
+  int capacitiveVal = analogRead(capacitivePin);
+  int plasticGlassThreshold = 500;
+  if (capacitiveVal > plasticGlassThreshold) {
+    Serial.println("Plastic or Glass");
+  } 
+  else {
+    Serial.println("Non-Plastic");
+  }
+}
